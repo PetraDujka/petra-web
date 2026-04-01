@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Petra Dujková — marketingová konzultantka z Frýdku-Místku. Pomáhám firmám a podnikatelům zorientovat se v marketingu. Co má a nemá smysl a jak si to zjednodušit.">
+  <title>Petra Dujková — Marketingová konzultantka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- NAVIGACE -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo">Petra Dujková</a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Hlavní navigace">
+        <ul class="nav__list">
+          <li><a href="#sluzby" class="nav__link">Jak vám pomůžu</a></li>
+          <li><a href="#skoleni" class="nav__link">Školení</a></li>
+          <li><a href="#o-mne" class="nav__link">Kdo jsem</a></li>
+          <li><a href="#projekty" class="nav__link">Projekty</a></li>
+          <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+        </ul>
+        <a href="https://petra-dujkova.reservio.com" class="btn btn--primary nav__cta" target="_blank" rel="noopener noreferrer">Rezervovat call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__inner container">
+        <div class="hero__text fade-in">
+          <p class="eyebrow eyebrow--mint"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
+          <h1 class="hero__h1">Konečně víte, co&nbsp;v&nbsp;marketingu dělat a&nbsp;co naopak vynechat.</h1>
+          <p class="hero__perex">Jsem Petra Dujková, marketingová generalistka. Pomáhám firmám a podnikatelům zorientovat se v marketingu. Co má a nemá smysl a jak si to zjednodušit.</p>
+          <div class="hero__btns">
+            <a href="https://petra-dujkova.reservio.com" class="btn btn--white" target="_blank" rel="noopener noreferrer">Rezervovat call</a>
+            <a href="#sluzby" class="btn btn--outline">Jak vám pomůžu</a>
+          </div>
+        </div>
+        <div class="hero__photo fade-in fade-in--delay">
+          <img src="petra_dujkova.png" alt="Petra Dujková" class="hero__img">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. JAK VÁM POMŮŽU -->
+    <section class="sluzby" id="sluzby">
+      <div class="container">
+        <p class="eyebrow eyebrow--mint">Služby</p>
+        <h2 class="section-title">Jak vám pomůžu</h2>
+
+        <div class="sluzby__list">
+
+          <div class="sluzba fade-in">
+            <div class="sluzba__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="sluzba__content">
+              <div class="sluzba__header">
+                <h3 class="sluzba__name">Online konzultace 30 min</h3>
+                <span class="badge badge--mint">ZDARMA</span>
+              </div>
+              <p class="sluzba__desc">Chcete se pobavit o problému, který aktuálně řešíte? Navrhnu vám způsob, jak bych danou situaci řešila. Bez závazků, bez prodejního tlaku.</p>
+              <p class="sluzba__desc">Termíny jsou každé úterý dopoledne. Rezervace online.</p>
+              <a href="https://petra-dujkova.reservio.com" class="btn btn--primary sluzba__btn" target="_blank" rel="noopener noreferrer">Rezervovat call</a>
+            </div>
+          </div>
+
+          <div class="sluzba fade-in">
+            <div class="sluzba__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="sluzba__content">
+              <div class="sluzba__header">
+                <h3 class="sluzba__name">Konzultace 1:1</h3>
+                <span class="sluzba__price">1.500 Kč/hod.</span>
+              </div>
+              <p class="sluzba__desc">Chcete nastavit marketing, který dává smysl? Od strategie přes kanály až po vyhodnocení. Konkrétní tipy a bez teorie.</p>
+            </div>
+          </div>
+
+          <div class="sluzba fade-in">
+            <div class="sluzba__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="sluzba__content">
+              <div class="sluzba__header">
+                <h3 class="sluzba__name">Projektová sazba</h3>
+                <span class="sluzba__price">1.000 Kč/hod. · 20 hodin měsíčně</span>
+              </div>
+              <p class="sluzba__desc">Vyhovuje vám spíše dlouhodobá spolupráce? Pro firmy nabízím práci na projektech, které potřebují rozjet. Strategie, marketingové kanály, obsah, reklama, vyhodnocení.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ŠKOLENÍ -->
+    <section class="skoleni-sekce" id="skoleni">
+      <div class="container">
+        <p class="eyebrow eyebrow--mint">Školení</p>
+        <h2 class="section-title">Školení formou záznamu</h2>
+        <p class="skoleni-sekce__uvod fade-in">Pusťte si je, kdy jen chcete a kolikrát potřebujete.</p>
+
+        <div class="skoleni__karty fade-in">
+          <div class="skoleni__karta">
+            <span class="tag tag--ai">AI</span>
+            <p class="skoleni__nazev">AI pro začátečníky</p>
+            <p class="skoleni__popis">Praktické vysvětlení, jak začít používat ChatGPT, Claude a Gemini. Bez technického žargonu, rovnou do praxe.</p>
+            <span class="skoleni__cena">490 Kč</span>
+          </div>
+          <div class="skoleni__karta">
+            <span class="tag tag--ai">AI</span>
+            <p class="skoleni__nazev">AI pro marketéry</p>
+            <p class="skoleni__popis">Jak si nastavit AI asistenty, abyste si usnadnili rutinní práci a zdokonalili svou expertizu ve vaší oblasti marketingu.</p>
+            <span class="skoleni__cena">490 Kč</span>
+          </div>
+          <div class="skoleni__karta">
+            <span class="tag tag--kreativita">Kreativita</span>
+            <p class="skoleni__nazev">Canva pro začátečníky</p>
+            <p class="skoleni__popis">Jak si jako negrafik vyrobit grafiku, která vypadá dobře. Opravdu.</p>
+            <span class="skoleni__cena">490 Kč</span>
+          </div>
+          <div class="skoleni__karta">
+            <span class="tag tag--kreativita">Kreativita</span>
+            <p class="skoleni__nazev">Canva pro marketéry</p>
+            <p class="skoleni__popis">Jak si zachránit zadek, když grafika je potřeba hned a grafik není k dispozici.</p>
+            <span class="skoleni__cena">490 Kč</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KDO JSEM -->
+    <section class="o-mne" id="o-mne">
+      <div class="container">
+        <div class="o-mne__inner">
+          <div class="o-mne__photo fade-in">
+            <img src="petra_dujkova2.png" alt="Petra Dujková" class="o-mne__img">
+          </div>
+          <div class="o-mne__text fade-in fade-in--delay">
+            <p class="eyebrow eyebrow--mint">O mně</p>
+            <h2 class="section-title section-title--light">Kdo jsem</h2>
+            <p class="o-mne__odstavec">Jsem Petra Dujková. Marketingová generalistka, podnikatelka, nadšenec do AI, milovnice komunit a podporovatelka začínajících podnikatelů.</p>
+            <p class="o-mne__odstavec">Ráda hledám smysluplná řešení složitých problémů, to mě na marketingu baví již od školy.</p>
+            <p class="o-mne__odstavec">Za ta léta jsem prošla B2B firmami, vlastními e-shopy i sociálními sítěmi pro osobní značky. Díky tomu vidím marketing jako celek, ne jen jeho jednotlivé části.</p>
+            <p class="o-mne__odstavec">Jsem nadšenec do AI, proto jsem členkou komunity AI FM ve Frýdku-Místku, ambasadoři CERNA.AI. Věřím, že správné AI nástroje mohou firmám a podnikatelům ušetřit hodiny týdně.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. REFERENCE -->
+    <section class="reference" id="reference">
+      <div class="container">
+        <p class="eyebrow eyebrow--mint">Reference</p>
+        <div class="reference__loga fade-in">
+          <div class="logo-item">
+            <img src="rodicoff.png" alt="Rodičoff" class="logo-img">
+          </div>
+          <div class="logo-item">
+            <img src="lenka.png" alt="Lenka Haluzíková" class="logo-img">
+          </div>
+          <div class="logo-item">
+            <img src="ferrit.png" alt="Ferrit s.r.o." class="logo-img">
+          </div>
+          <div class="logo-item">
+            <img src="atlas.png" alt="Atlas" class="logo-img">
+          </div>
+          <div class="logo-item">
+            <img src="dt.png" alt="DT" class="logo-img">
+          </div>
+          <div class="logo-item">
+            <img src="rmt.png" alt="RMT" class="logo-img">
+          </div>
+          <div class="logo-item">
+            <img src="aifm_logo_transparent.png" alt="AI FM" class="logo-img">
+          </div>
+        </div>
+        <h2 class="section-title fade-in">Co říkají ostatní</h2>
+        <p class="reference__placeholder fade-in">Reference připravujeme — brzy zde.</p>
+      </div>
+    </section>
+
+    <!-- 6. MOJE PROJEKTY -->
+    <section class="projekty" id="projekty">
+      <div class="container">
+        <p class="eyebrow eyebrow--mint">Projekty</p>
+        <h2 class="section-title">Moje projekty</h2>
+        <div class="projekty__karty">
+
+          <div class="projekt-karta fade-in">
+            <div class="projekt-karta__logo-wrap">
+              <img src="kokybaby.png" alt="KokyBaby" class="projekt-karta__img">
+            </div>
+            <div class="projekt-karta__body">
+              <h3 class="projekt-karta__nazev">KokyBaby</h3>
+              <p class="projekt-karta__popis">Vlastní značka designových lněných dekorací do dětského pokoje. Projekt, kde jsem si sama vyzkoušela vše od strategie přes e-shop až po fotografování produktů. Nyní na pauze, od června 2025 zpět.</p>
+            </div>
+          </div>
+
+          <div class="projekt-karta fade-in fade-in--delay">
+            <div class="projekt-karta__logo-wrap">
+              <img src="aifm_logo_transparent.png" alt="AI FM" class="projekt-karta__img">
+            </div>
+            <div class="projekt-karta__body">
+              <h3 class="projekt-karta__nazev">AI FM</h3>
+              <p class="projekt-karta__popis">Jsem spoluzakladatelkou komunity AI FM ve Frýdku-Místku. Propojujeme AI nadšence a profesionály, kteří se navzájem inspirují, učí a posouvají dopředu. Jsme ambasadoři CERNA.AI.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. FOOTER / KONTAKT -->
+  <footer class="kontakt" id="kontakt">
+    <div class="container">
+      <h2 class="kontakt__h2">Kde mě zastihnete?</h2>
+      <ul class="kontakt__list">
+        <li class="kontakt__item">
+          <svg class="kontakt__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://linkedin.com/in/petra-dujkova" class="kontakt__link" target="_blank" rel="noopener noreferrer">linkedin.com/in/petra-dujkova</a>
+        </li>
+        <li class="kontakt__item">
+          <svg class="kontakt__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:petra.dujkova@seznam.cz" class="kontakt__link">petra.dujkova@seznam.cz</a>
+        </li>
+        <li class="kontakt__item">
+          <svg class="kontakt__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.01z"/></svg>
+          <a href="tel:+420606721519" class="kontakt__link">+420 606 721 519</a>
+        </li>
+      </ul>
+      <p class="kontakt__copyright">© 2025 Petra Dujková</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

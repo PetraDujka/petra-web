@@ -1,0 +1,80 @@
+# PETRA DUJKOVÁ — DESIGN SYSTÉM
+
+
+## BARVY
+
+### Pozadí
+#FDF4F0  Rose Parchment — pozadí celého webu
+#FFFFFF  — pozadí karet a formulářů
+
+### Primární text
+#1A0A0F  — nadpisy a primární text na světlém pozadí
+#7A5A60  — sekundární text, popisky, perex
+#FDF4F0  — veškerý text na tmavých a barevných sekcích
+
+### Akcentové barvy
+#8B1A6B  Fuchsia Violet — hlavní CTA tlačítko, primární akcent, hero pozadí, logo
+#C2185B  Crimson Rose — závěrečná CTA sekce, hover stavy na fuksia prvcích
+#5ECFB0  Cool Mint — eyebrow texty, tagy pro AI témata, čísla ve statistikách, druhé tlačítko
+#E8A87C  Terracotta Peach — doplňkové akcenty, dekorativní prvky, tagy pro kreativní témata
+
+### Tmavé sekce
+#2D1020  Tmavá švestka — pozadí tmavých sekcí, footer
+
+### Gradient (pouze jednou — hero nebo hlavní banner)
+linear-gradient(135deg, #8B1A6B 0%, #C2185B 55%, #E8A87C 100%)
+
+
+---
+
+
+## FONTY
+
+Google Fonts — přidat do hlavičky webu:
+- Syne (váhy 600, 700)
+- DM Sans (váhy 400, 500)
+
+### Syne Bold / 700
+- hlavní nadpisy H1, H2
+- logo v navigaci
+- čísla ve statistikách
+
+### Syne SemiBold / 600
+- nadpisy karet H3
+- názvy sekcí
+
+### DM Sans Regular / 400
+- veškerý běžný text, perex, popisky
+- navigační odkazy
+- texty tlačítek
+
+### DM Sans Medium / 500
+- tlačítka CTA
+- eyebrow texty (verzálky, letter-spacing)
+- tagy a štítky
+
+
+---
+
+
+## STRUKTURA WEBU
+
+1. Hero sekce
+2. Jak vám pomůžu (nabídka + ceny)
+3. Kdo jsem
+4. Reference (placeholder — doplnit)
+5. Moje projekty
+6. Kde mě zastihnete (kontakt)
+
+Záložka: Moje projekty (KokyBaby, AI FM, další přibývají)
+
+
+---
+
+
+## POZNÁMKY PRO VÝVOJ
+
+- Rezervace callu: doplnit odkaz na Reservio nebo Calendly
+- Reference: placeholder loga (Rodičoff, Lenka Haluzíková, Ferrit s.r.o.) — texty doplnit později
+- KokyBaby: od května 2025 znovu aktivní
+- Šablona inspirace: Wix šablona "Konzultant v oblasti sociálních sítí" (číslo 2834) — vlastní barvy a fonty dle tohoto design systému

@@ -1,0 +1,970 @@
+/* =====================================================
+   PETRA DUJKOVÁ — style.css
+   ===================================================== */
+
+/* === PRELOADER ======================================== */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader__dots {
+  display: flex;
+  gap: 10px;
+}
+
+.preloader__dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-fuchsia);
+  animation: preloader-bounce 0.6s infinite alternate;
+}
+
+.preloader__dots span:nth-child(2) { animation-delay: 0.2s; }
+.preloader__dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes preloader-bounce {
+  from { transform: translateY(0); opacity: 0.4; }
+  to   { transform: translateY(-14px); opacity: 1; }
+}
+
+/* === TYPED CURSOR ===================================== */
+.typed-cursor {
+  display: inline-block;
+  color: var(--color-mint);
+  font-weight: 400;
+  animation: cursor-blink 0.8s infinite;
+  margin-left: 2px;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* === RESET & BASE ===================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  color: #1A0A0F;
+  background-color: #FDF4F0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === TOKENS =========================================== */
+:root {
+  --color-fuchsia:    #8B1A6B;
+  --color-crimson:    #C2185B;
+  --color-mint:       #5ECFB0;
+  --color-peach:      #E8A87C;
+  --color-cream:      #FDF4F0;
+  --color-dark:       #2D1020;
+  --color-near-black: #1A0A0F;
+  --color-muted:      #7A5A60;
+  --color-white:      #FFFFFF;
+
+  --gradient-hero: linear-gradient(135deg, #8B1A6B 0%, #C2185B 55%, #E8A87C 100%);
+
+  --container: 1160px;
+  --radius:    12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+/* === CONTAINER ======================================== */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* === TYPOGRAPHY ======================================= */
+h1, h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-near-black);
+  margin-top: 8px;
+  margin-bottom: 48px;
+}
+
+.section-title--light {
+  color: var(--color-cream);
+}
+
+/* === EYEBROW ========================================== */
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow--mint {
+  color: var(--color-mint);
+}
+
+/* === BUTTONS ========================================== */
+.btn {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform var(--transition), background-color var(--transition), color var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.btn--primary {
+  background-color: var(--color-fuchsia);
+  color: var(--color-white);
+}
+.btn--primary:hover {
+  background-color: var(--color-crimson);
+}
+
+.btn--white {
+  background-color: var(--color-white);
+  color: var(--color-fuchsia);
+}
+.btn--white:hover {
+  background-color: var(--color-cream);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+.btn--outline:hover {
+  background-color: rgba(255,255,255,0.12);
+}
+
+.btn--accent {
+  background-color: var(--color-crimson);
+  color: var(--color-white);
+}
+.btn--accent:hover {
+  background-color: var(--color-fuchsia);
+}
+
+/* === NAV ============================================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 16px rgba(43, 10, 32, 0.08);
+  transition: box-shadow var(--transition);
+}
+
+.nav.scrolled {
+  box-shadow: 0 2px 16px rgba(43, 10, 32, 0.08);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav__logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-fuchsia);
+  flex-shrink: 0;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__link {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: var(--color-near-black);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.nav__link:hover {
+  color: var(--color-mint);
+  background-color: rgba(94,207,176,0.1);
+}
+
+
+.nav__cta {
+  margin-left: 12px;
+}
+
+/* Hamburger */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 110;
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-fuchsia);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav__hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav__hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav__hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* === HERO ============================================= */
+.hero {
+  background: var(--gradient-hero);
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero__text .eyebrow {
+  margin-bottom: 16px;
+}
+
+.hero__h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.hero__perex {
+  font-size: 1.0625rem;
+  color: #FDF4F0;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero__photo {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: top center;
+  aspect-ratio: 3/4;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+  transform: scaleX(-1);
+}
+
+/* === SLUZBY =========================================== */
+.sluzby {
+  background-color: var(--color-cream);
+  padding: 96px 0;
+}
+
+.sluzby__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 48px;
+  border: 1px solid rgba(139,26,107,0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.sluzba {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 36px 40px;
+  border-bottom: 1px solid rgba(139,26,107,0.08);
+  transition: background-color var(--transition);
+}
+
+.sluzba:last-child {
+  border-bottom: none;
+}
+
+.sluzba:hover {
+  background-color: rgba(253,244,240,0.7);
+}
+
+.sluzba__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(139,26,107,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-fuchsia);
+}
+
+.sluzba__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sluzba__content {
+  flex: 1;
+}
+
+.sluzba__header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.sluzba__name {
+  font-size: 1.1875rem;
+  color: var(--color-near-black);
+}
+
+.sluzba__price {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--color-fuchsia);
+  background-color: rgba(139,26,107,0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.sluzba__desc {
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+
+.sluzba__desc:last-of-type {
+  margin-bottom: 12px;
+}
+
+.sluzba__link {
+  font-weight: 500;
+  color: var(--color-fuchsia);
+  font-size: 0.9375rem;
+  transition: color var(--transition);
+}
+
+.sluzba__link:hover {
+  color: var(--color-crimson);
+}
+
+/* Badge */
+.badge {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge--mint {
+  background-color: var(--color-mint);
+  color: var(--color-dark);
+}
+
+/* Školení — vlastní sekce */
+.skoleni-sekce {
+  background-color: var(--color-dark);
+  padding: 96px 0;
+}
+
+.skoleni-sekce .eyebrow--mint {
+  color: var(--color-mint);
+}
+
+.skoleni-sekce .section-title {
+  color: var(--color-cream);
+}
+
+.skoleni-sekce__uvod {
+  font-size: 1.0625rem;
+  color: var(--color-cream);
+  opacity: 0.75;
+  margin-top: -28px;
+  margin-bottom: 40px;
+}
+
+/* Tlačítko uvnitř sluzby */
+.sluzba__btn {
+  margin-top: 8px;
+}
+
+.skoleni__karty {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.skoleni__karta {
+  background-color: var(--color-white);
+  border: 1px solid rgba(232,168,124,0.3);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(43,10,32,0.05);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.skoleni__karta:hover {
+  box-shadow: 0 6px 20px rgba(43,10,32,0.1);
+  transform: translateY(-2px);
+}
+
+.skoleni__nazev {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-near-black);
+  margin: 10px 0 6px;
+}
+
+.skoleni__popis {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.skoleni__cena {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-fuchsia);
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.tag--ai {
+  background-color: var(--color-mint);
+  color: var(--color-dark);
+}
+
+.tag--kreativita {
+  background-color: var(--color-peach);
+  color: var(--color-dark);
+}
+
+/* Section CTA */
+.section-cta {
+  text-align: center;
+}
+
+/* === O MNĚ ============================================ */
+.o-mne {
+  background: var(--gradient-hero);
+  padding: 96px 0;
+}
+
+.o-mne__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.o-mne__img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: top center;
+  aspect-ratio: 3/4;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+.o-mne__text .eyebrow {
+  margin-bottom: 8px;
+}
+
+.o-mne__odstavec {
+  color: var(--color-cream);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.o-mne__odstavec:last-child {
+  margin-bottom: 0;
+}
+
+/* === REFERENCE ======================================== */
+.reference {
+  background-color: var(--color-cream);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.reference__loga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  display: block;
+  max-height: 64px;
+  max-width: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.55);
+  transition: filter var(--transition);
+}
+
+.logo-img:hover {
+  filter: grayscale(0) opacity(1);
+}
+
+.reference__placeholder {
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+}
+
+/* === PROJEKTY ========================================= */
+.projekty {
+  background-color: var(--color-white);
+  padding: 96px 0;
+}
+
+.projekty__karty {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.projekt-karta {
+  background-color: var(--color-cream);
+  border: 1.5px solid var(--color-peach);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.projekt-karta:hover {
+  box-shadow: 0 10px 32px rgba(43,10,32,0.1);
+  transform: translateY(-3px);
+}
+
+.projekt-karta__logo-wrap {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projekt-karta__img {
+  max-width: 180px;
+  max-height: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.projekt-karta__body {
+  flex: 1;
+}
+
+.projekt-karta__logo-wrap--text {
+  align-items: center;
+}
+
+.projekt-karta__text-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--color-fuchsia);
+  letter-spacing: 0.04em;
+}
+
+.projekt-karta__nazev {
+  font-size: 1.25rem;
+  color: var(--color-near-black);
+  margin-bottom: 14px;
+}
+
+.projekt-karta__popis {
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+/* === CTA BANNER ======================================= */
+.cta-banner {
+  background: var(--gradient-hero);
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* === KONTAKT / FOOTER ================================= */
+.kontakt {
+  background-color: var(--color-dark);
+  padding: 80px 0 48px;
+  text-align: center;
+}
+
+.kontakt__h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: var(--color-cream);
+  margin-bottom: 40px;
+}
+
+.kontakt__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.kontakt__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.kontakt__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-mint);
+  flex-shrink: 0;
+}
+
+.kontakt__link {
+  font-size: 1rem;
+  color: var(--color-cream);
+  transition: color var(--transition);
+}
+
+.kontakt__link:hover {
+  color: var(--color-mint);
+}
+
+.kontakt__cta {
+  margin-bottom: 56px;
+}
+
+.kontakt__copyright {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* === FADE-IN ANIMATIONS =============================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in--delay {
+  transition-delay: 0.15s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE ======================================= */
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero__perex {
+    max-width: 100%;
+  }
+
+  .hero__btns {
+    justify-content: center;
+  }
+
+  .hero__photo {
+    order: -1;
+  }
+
+  .hero__img {
+    max-width: 320px;
+    aspect-ratio: 4/5;
+    margin-inline: auto;
+  }
+
+  .o-mne__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .o-mne__img {
+    max-width: 280px;
+    margin-inline: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .projekty__karty {
+    grid-template-columns: 1fr;
+  }
+
+  .skoleni__karty {
+    grid-template-columns: 1fr;
+  }
+
+  .sluzba {
+    padding: 28px 24px;
+  }
+
+  .skoleni {
+    padding: 28px 24px;
+  }
+
+  .skoleni__uvod {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Hamburger menu */
+  .nav__hamburger {
+    display: flex;
+  }
+
+  .nav__menu {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+    z-index: 105;
+  }
+
+  .nav__menu.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .nav__link {
+    font-size: 1.25rem;
+    color: var(--color-near-black) !important;
+    padding: 10px 20px;
+  }
+
+  .nav__cta {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  .sluzby {
+    padding: 64px 0;
+  }
+
+  .o-mne {
+    padding: 64px 0;
+  }
+
+  .reference {
+    padding: 64px 0;
+  }
+
+  .projekty {
+    padding: 64px 0;
+  }
+
+  .reference__loga {
+    gap: 32px;
+  }
+
+  .projekt-karta {
+    padding: 28px 24px;
+  }
+
+  .kontakt {
+    padding: 64px 0 40px;
+  }
+
+  .kontakt__list {
+    align-items: flex-start;
+    margin-inline: auto;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero__img {
+    max-width: 260px;
+  }
+
+  .sluzba {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sluzba__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

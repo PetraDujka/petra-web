@@ -1,0 +1,129 @@
+# PROMPT PRO CLAUDE CODE — WEB PETRA DUJKOVÁ
+
+## ZADÁNÍ
+
+Postav osobní web pro Petru Dujkovou, freelance marketingovou konzultantku z Frýdku-Místku. Web je v češtině, jednoduchý, přehledný a lidský. Texty a design systém jsou přiloženy v souborech.
+
+---
+
+## SOUBORY V PROJEKTU
+
+- `texty.txt` — všechny texty webu
+- `design.txt` — barvy, fonty, poznámky
+- `foto.png` — profesionální fotka Petry (použít v hero sekci a sekci Kdo jsem)
+- `logo_rodicoff.png` — logo klienta Rodičoff
+- `logo_ferrit.png` — logo klienta Ferrit
+- `logo_lenka.png` — logo klienta Lenka Haluzíková
+- `logo_kokybaby.png` — logo projektu KokyBaby
+- `logo_aifm.png` — logo projektu AI FM (zatím není, použij placeholder text "AI FM")
+
+---
+
+## TECHNOLOGIE
+
+- Čistý HTML + CSS + minimální vanilla JS
+- Žádné frameworky
+- Google Fonts: Syne (600, 700) + DM Sans (400, 500)
+- Mobilní responsivita povinná
+- Jeden soubor index.html + jeden style.css
+
+---
+
+## STRUKTURA WEBU
+
+### Navigace (sticky, nahoře)
+- Vlevo: jméno "Petra Dujková" (Syne Bold, barva #8B1A6B)
+- Vpravo: odkazy — Jak vám pomůžu | Kdo jsem | Projekty | Kontakt
+- Úplně vpravo: CTA tlačítko "Rezervovat call" (#8B1A6B, bílý text)
+
+### 1. HERO SEKCE
+- Pozadí: gradient linear-gradient(135deg, #8B1A6B 0%, #C2185B 55%, #E8A87C 100%)
+- Layout: dvousloupcový — vlevo text, vpravo fotka Petry (foto.png)
+- Vlevo:
+  - Eyebrow text: "Marketingová konzultantka" (DM Sans Medium, verzálky, #5ECFB0)
+  - H1: "Konečně víte, co v marketingu dělat a co pustit." (Syne Bold, bílá)
+  - Perex: "Jsem Petra, marketingová generalistka, která si pomáhá AI týmem. Pomáhám malým firmám a podnikatelkám zorientovat se v marketingu. Co dělat, co pustit a jak si to zjednodušit." (DM Sans Regular, #FDF4F0)
+  - CTA tlačítko: "Rezervovat bezplatný call" (bílé pozadí, #8B1A6B text)
+  - Druhé tlačítko: "Jak vám pomůžu" (průhledné, bílý rámeček, bílý text)
+- Vpravo: fotka Petry, lehce zaoblené rohy
+
+### 2. JAK VÁM POMŮŽU
+- Pozadí: #FDF4F0
+- Eyebrow: "Služby" (#5ECFB0, verzálky)
+- H2: "Jak vám pomůžu" (Syne Bold, #1A0A0F)
+- Layout: seznam služeb — každá položka má ikonu vlevo, název H3 + popis + cena
+- Položky:
+  1. Bezplatná konzultace 30 min — zdarma (badge "ZDARMA" v #5ECFB0)
+     "Chcete se pobavit o problému, který aktuálně řešíte? Navrhnu vám způsob, jak bych danou situaci řešila. Bez závazků, bez prodejního tlaku. Termíny každé úterý dopoledne."
+     CTA: "Rezervovat termín" (odkaz — placeholder #)
+  2. Konzultace
+     "Chcete nastavit marketing, který dává smysl? Od strategie přes kanály až po vyhodnocení. Konkrétní tipy a bez teorie."
+     Cena: "1 500 Kč / hodinu"
+  3. Projektová sazba
+     "Pravidelná spolupráce pro firmy, které potřebují marketing skutečně rozjet. Strategie, kanály, obsah, reklama, vyhodnocení."
+     Cena: "1 000 Kč / hodinu, 20 hodin měsíčně"
+  4. Školení formou záznamu — 490 Kč/kus
+     4 školení jako karty (#FFFFFF pozadí, jemný shadow):
+     - AI pro začátečníky — tag "AI" (#5ECFB0)
+     - AI pro marketéry — tag "AI" (#5ECFB0)
+     - Canva pro začátečníky — tag "Kreativita" (#E8A87C)
+     - Canva pro marketéry — tag "Kreativita" (#E8A87C)
+- Na konci sekce CTA tlačítko: "Rezervovat bezplatný call" (#8B1A6B)
+
+### 3. KDO JSEM
+- Pozadí: #2D1020 (tmavá sekce)
+- Layout: dvousloupcový — vlevo fotka Petry, vpravo text
+- Eyebrow: "O mně" (#5ECFB0, verzálky)
+- H2: "Kdo jsem" (Syne Bold, #FDF4F0)
+- Text (DM Sans Regular, #FDF4F0):
+  "Jsem Petra Dujková. Marketingová generalistka, která si pomáhá AI týmem. 🙃
+  Ráda hledám cestu přes složitost k jednoduchému řešení. To mě na marketingu baví nejvíce.
+  Za ta léta jsem prošla B2B firmami, vlastním e-shopem i sociálními sítěmi pro osobní značky. Díky tomu vidím marketing jako celek, ne jen jeho jednotlivé části.
+  A AI? Tu používám každý den. Proto jsem také členkou komunity AI FM ve Frýdku-Místku. Věřím, že správné AI nástroje a asistenti mohou malé firmě ušetřit hodiny týdně. A ráda ukážu jak."
+
+### 4. REFERENCE
+- Pozadí: #FDF4F0
+- Eyebrow: "Reference" (#5ECFB0, verzálky)
+- H2: "Co říkají ostatní" (Syne Bold, #1A0A0F)
+- Loga klientů v řadě (grayscale, při hoveru barevné):
+  logo_rodicoff.png | logo_lenka.png | logo_ferrit.png
+- Placeholder text pod logy: "Reference připravujeme — brzy zde." (DM Sans, #7A5A60, kurzíva)
+
+### 5. MOJE PROJEKTY
+- Pozadí: #FFFFFF
+- Eyebrow: "Projekty" (#5ECFB0, verzálky)
+- H2: "Moje projekty" (Syne Bold, #1A0A0F)
+- Dvě karty (#FDF4F0 pozadí, border #E8A87C):
+  Karta 1: KokyBaby (logo_kokybaby.png)
+  "Vlastní značka designových lněných dekorací do dětského pokoje. Projekt, kde jsem si sama vyzkoušela vše od strategie přes e-shop až po fotografování produktů. Nyní na pauze, od května 2025 zpět."
+  Karta 2: AI FM (placeholder text místo loga)
+  "Jsem spoluzakladatelkou komunity AI FM ve Frýdku-Místku. Propojujeme AI nadšence a profesionály, kteří se navzájem inspirují, učí a posouvají dopředu."
+
+### 6. FOOTER / KONTAKT
+- Pozadí: #2D1020
+- H2: "Kde mě zastihnete?" (Syne Bold, #FDF4F0)
+- Kontakty (DM Sans, #FDF4F0):
+  LinkedIn: linkedin.com/in/petra-dujkova
+  Email: petra.dujkova@seznam.cz
+  Telefon: +420 606 721 519
+- CTA tlačítko: "Rezervovat bezplatný call" (#C2185B pozadí, bílý text)
+- Copyright: "© 2025 Petra Dujková" (#7A5A60)
+
+---
+
+## ANIMACE (jednoduché, čisté)
+
+- Fade-in při scrollování pro každou sekci (IntersectionObserver)
+- Hover efekty na tlačítkách (lehký scale + barva)
+- Loga klientů: grayscale → barevné při hoveru (CSS transition)
+- Navigace: při scrollu přidej bílé pozadí + lehký shadow
+
+---
+
+## DŮLEŽITÉ POZNÁMKY
+
+- Žádné složité animace, web musí být rychlý
+- Mobilní verze povinná — hamburger menu na mobilu
+- Loga na černém pozadí v souborech — použij CSS filter nebo mix-blend-mode pro zobrazení na světlém pozadí
+- Placeholder pro Calendly/Reservio odkaz: "#" — Petra doplní později
+- Web je v češtině, žádné anglické texty
