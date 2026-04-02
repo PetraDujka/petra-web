@@ -957,12 +957,20 @@ h3 {
   }
 
   .reference__loga {
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .logo-item {
+    width: 100%;
   }
 
   .logo-img {
-    height: 44px;
+    height: 40px;
+    max-width: 100%;
   }
 
   .projekt-karta {
