@@ -957,7 +957,12 @@ h3 {
   }
 
   .reference__loga {
-    gap: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo-img {
+    height: 44px;
   }
 
   .projekt-karta {
